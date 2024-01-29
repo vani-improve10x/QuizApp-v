@@ -14,6 +14,6 @@ public class QuestionService {
     QuestionDao questionDao;
 
     public List<Question> getAllQuestions() {
-        questionDao.getAllQuestions();
+        return questionDao.findAll();
     }
 }
