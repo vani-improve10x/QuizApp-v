@@ -3,8 +3,9 @@ package com.example.Quizapp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+
 @Data
 @Entity
 public class Question {
@@ -18,5 +19,5 @@ public class Question {
     private String option3;
     private String option4;
     private String questionTitle;
-    private String rightTitle;
+    private String rightAnswer;
 }
