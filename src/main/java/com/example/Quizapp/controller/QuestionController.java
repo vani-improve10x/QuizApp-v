@@ -1,8 +1,10 @@
 package com.example.Quizapp.controller;
 
-import com.example.Quizapp.Question;
+import com.example.Quizapp.model.Question;
 import com.example.Quizapp.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +16,7 @@ public class QuestionController {
     @Autowired
     QuestionService questionService;
     @GetMapping("allQuestions")
-    public List<Question> getAllQuestions(){
+    public ResponseEntity<List<Question>> getAllQuestions(){
         return questionService.getAllQuestions();
     }
 
