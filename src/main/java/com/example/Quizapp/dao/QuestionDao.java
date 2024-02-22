@@ -11,4 +11,5 @@ public interface QuestionDao extends JpaRepository<Question,Integer> {
 
     public List<Question>findByCategory(String category);
 
+    List<Question> findRandomQuestionsByCategory(String category, int numQ);
 }
