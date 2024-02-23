@@ -3,6 +3,7 @@ package com.example.Quizapp.service;
 import com.example.Quizapp.dao.QuestionDao;
 import com.example.Quizapp.dao.QuizDao;
 import com.example.Quizapp.model.Question;
+import com.example.Quizapp.model.QuestionWrapper;
 import com.example.Quizapp.model.Quiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -26,5 +27,9 @@ public class QuizService {
         quiz.setQuestions(questions);
         quizDao.save(quiz);
         return new ResponseEntity<>("success", HttpStatus.CREATED);
+    }
+
+    public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(Integer id) {
+        
     }
 }
