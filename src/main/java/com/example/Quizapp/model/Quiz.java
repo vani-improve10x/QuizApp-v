@@ -1,8 +1,6 @@
 package com.example.Quizapp.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
@@ -11,8 +9,9 @@ import java.util.List;
 @Data
 public class Quiz {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
     public String title;
+    @ManyToMany
     public List<Question> questions;
 }
