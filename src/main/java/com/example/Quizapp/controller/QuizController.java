@@ -21,7 +21,6 @@ public class QuizController {
         return quizService.createQuiz(category, numQ, title);
     }
     @GetMapping("get/{id}")
-
     public ResponseEntity<List<QuestionWrapper>> getQuizQuestions(@PathVariable("id") Integer id){
        return quizService.getQuizQuestions(id);
     }
